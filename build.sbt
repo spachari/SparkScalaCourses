@@ -4,7 +4,7 @@ version := "0.1"
 
 scalaVersion := "2.11.8"
 
-val sparkVersion = "2.3.1"
+val sparkVersion = "2.3.0"
 
 resolvers += "MavenRepository" at "https://mvnrepository.com/"
 
@@ -25,7 +25,8 @@ libraryDependencies ++= Seq(
   "org.scalaj" %% "scalaj-http" % "2.4.1",
   "org.json4s" %% "json4s-native" % "3.6.0-M2",
   "org.json4s" %% "json4s-jackson" % "3.6.0-M2",
-  "com.typesafe.scala-logging" %% "scala-logging" % "3.7.2"
+  "com.typesafe.scala-logging" %% "scala-logging" % "3.7.2",
+  "org.apache.spark" %% "spark-sql-kafka-0-10" % "2.2.0"
   
 ).map(_.exclude("net.jpountz.lz4","lz4"))
 

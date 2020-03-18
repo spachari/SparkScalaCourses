@@ -4,7 +4,7 @@
 		module="sparkscalacourses-build-build"
 		revision="0.1-SNAPSHOT"
 		status="integration"
-		publication="20190530142445"
+		publication="20200318064345"
 		e:sbtVersion="0.13" e:scalaVersion="2.10"
 	>
 		<description>

@@ -4,7 +4,7 @@
 		module="sparkscalacourses_2.11"
 		revision="0.1"
 		status="integration"
-		publication="20190611062756"
+		publication="20200318082158"
 	>
 		<description>
 		SparkScalaCourses
@@ -46,19 +46,19 @@
 		<dependency org="joda-time" name="joda-time" rev="2.9.9" conf="compile->default(compile)">
 			<exclude org="net.jpountz.lz4" module="lz4" name="*" type="*" ext="*" conf="" matcher="exact"/>
 		</dependency>
-		<dependency org="org.apache.spark" name="spark-core_2.11" rev="2.3.1" conf="compile->default(compile)">
+		<dependency org="org.apache.spark" name="spark-core_2.11" rev="2.3.0" conf="compile->default(compile)">
 			<exclude org="net.jpountz.lz4" module="lz4" name="*" type="*" ext="*" conf="" matcher="exact"/>
 		</dependency>
-		<dependency org="org.apache.spark" name="spark-sql_2.11" rev="2.3.1" conf="compile->default(compile)">
+		<dependency org="org.apache.spark" name="spark-sql_2.11" rev="2.3.0" conf="compile->default(compile)">
 			<exclude org="net.jpountz.lz4" module="lz4" name="*" type="*" ext="*" conf="" matcher="exact"/>
 		</dependency>
-		<dependency org="org.apache.spark" name="spark-graphx_2.11" rev="2.3.1" conf="compile->default(compile)">
+		<dependency org="org.apache.spark" name="spark-graphx_2.11" rev="2.3.0" conf="compile->default(compile)">
 			<exclude org="net.jpountz.lz4" module="lz4" name="*" type="*" ext="*" conf="" matcher="exact"/>
 		</dependency>
-		<dependency org="org.apache.spark" name="spark-streaming_2.11" rev="2.3.1" conf="compile->default(compile)">
+		<dependency org="org.apache.spark" name="spark-streaming_2.11" rev="2.3.0" conf="compile->default(compile)">
 			<exclude org="net.jpountz.lz4" module="lz4" name="*" type="*" ext="*" conf="" matcher="exact"/>
 		</dependency>
-		<dependency org="org.apache.spark" name="spark-hive_2.11" rev="2.3.1" conf="compile->default(compile)">
+		<dependency org="org.apache.spark" name="spark-hive_2.11" rev="2.3.0" conf="compile->default(compile)">
 			<exclude org="net.jpountz.lz4" module="lz4" name="*" type="*" ext="*" conf="" matcher="exact"/>
 		</dependency>
 		<dependency org="org.scalatest" name="scalatest_2.11" rev="2.2.1" conf="compile->default(compile)">
@@ -83,6 +83,9 @@
 			<exclude org="net.jpountz.lz4" module="lz4" name="*" type="*" ext="*" conf="" matcher="exact"/>
 		</dependency>
 		<dependency org="com.typesafe.scala-logging" name="scala-logging_2.11" rev="3.7.2" conf="compile->default(compile)">
+			<exclude org="net.jpountz.lz4" module="lz4" name="*" type="*" ext="*" conf="" matcher="exact"/>
+		</dependency>
+		<dependency org="org.apache.spark" name="spark-sql-kafka-0-10_2.11" rev="2.2.0" conf="compile->default(compile)">
 			<exclude org="net.jpountz.lz4" module="lz4" name="*" type="*" ext="*" conf="" matcher="exact"/>
 		</dependency>
 		<override org="com.fasterxml.jackson.core" module="jackson-databind" matcher="exact" rev="2.8.9"/>

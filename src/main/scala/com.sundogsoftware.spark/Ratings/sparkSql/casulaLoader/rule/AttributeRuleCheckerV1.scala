@@ -3,7 +3,7 @@ package com.sundogsoftware.spark.Ratings.sparkSql.casulaLoader.rule
 import com.sundogsoftware.spark.Ratings.sparkSql.casulaLoader.domain.{Attribute, Attribute_Metadata}
 import com.sundogsoftware.spark.Ratings.sparkSql.casulaLoader.exceptions.{CannotLoadInactiveAttributeException, DataTypeMismatchException, SameNameUsedByDifferentTeamException}
 
-case class AttributeRuleChecker(attributesInMetadata : List[Attribute_Metadata], casulaDFMetaData : Seq[Attribute], teamName : String) {
+case class AttributeRuleChecker1(attributesInMetadata : List[Attribute_Metadata], casulaDFMetaData : Seq[Attribute], teamName : String) {
 
 
   def checkNewAttributeRules(): Unit = {
