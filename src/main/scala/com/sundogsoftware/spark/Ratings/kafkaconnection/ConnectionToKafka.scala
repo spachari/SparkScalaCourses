@@ -13,16 +13,12 @@ object ConnectionToKafka extends App {
     .getOrCreate()
   spark.sparkContext.setLogLevel("DEBUG")
 
-  val streamingInputDF = spark.readStream.format("kafka")
+  val streamingInputDF = spark.readStream
+    .format("kafka")
     .option("kafka.bootstrap.servers","127.0.0.1:9092")
-    .option("subscribe", "first_topic")
+    .option("subscribe", "streaming_test")
     .load()
 
-  //streamingInputDF.printSchema()
-
-  //streamingInputDF.show()
-
-  //--broker-list 127.0.0.1:9092 --topic first_topic
 
 
   val query = streamingInputDF
@@ -31,8 +27,6 @@ object ConnectionToKafka extends App {
     .option("truncate", "false")
     .outputMode(OutputMode.Update())
     .start().awaitTermination()
-
-  // Keep going until we're stopped.
 
   spark.streams.awaitAnyTermination()
 
